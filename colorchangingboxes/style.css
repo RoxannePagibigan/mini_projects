@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    margin: 60px;
+    padding: 60px;
+    background-color: black;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(43, 41, 41);
+    width: 150px;
+    height: 150px;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.2);
+}

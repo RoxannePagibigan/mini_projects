@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Color Changing Boxes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+        <script type="text/javascript">
+            function random_color()
+            {
+                var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
+                color = '#'  //this is what we'll return!
+                for(var i = 0; i < 6; i++) 
+                {
+                x = Math.floor((Math.random()*16))
+                color += rgb[x]; 
+                }
+                return color;
+            }
+            $(document).ready(function(){
+                $('.main-container').click(function(){
+                $(this).css('background-color', random_color)
+                $(this).children().css('background-color', random_color)
+            //comment this out when you have figured out what event.stopPropagation is used for
+                })
+                $('.box').click(function(event){
+                event.stopPropagation();
+                $(this).siblings().css('background-color', random_color)
+                })
+            });
+        </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
