@@ -2,8 +2,13 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    margin: 40px;
+}
+
 .main-container {
-    margin: 60px;
+    margin: 0 60px 30px 60px;
     padding: 60px;
     background-color: black;
     display: grid;
@@ -12,7 +17,7 @@
 }
 
 .box {
-    background-color: white;
+    background-color: pink;
     border-radius: 10px;
     cursor: pointer;
     color: rgb(43, 41, 41);
